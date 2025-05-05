@@ -1,50 +1,90 @@
+/* 기본 스타일 */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
   margin: 0;
-  font-family: 'Pretendard', sans-serif;
-  background: linear-gradient(to right, #a2d9ff, #d0f0ff);
-  color: #333;
+  padding: 0;
 }
 
 header {
-  text-align: center;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-button {
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 1rem;
   background-color: #0077cc;
   color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
+  text-align: center;
+  padding: 30px 0;
 }
 
-button:hover {
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+/* 소개 섹션 스타일 */
+#intro {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#intro h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+#intro p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* 버튼 스타일 */
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+nav button {
+  background-color: #0077cc;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
   background-color: #005fa3;
 }
 
+/* 카드 스타일 */
 #place-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 1rem;
+  gap: 20px;
+  padding: 20px;
 }
 
-.card {
-  background: white;
-  border-radius: 1rem;
-  padding: 1rem 1.5rem;
+.place-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
   width: 250px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place-card h4 {
+  font-size: 20px;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.place-card p {
+  font-size: 16px;
+  color: #555;
 }

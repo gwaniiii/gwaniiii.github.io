@@ -15,8 +15,6 @@ const places = {
     { title: "돌산공원", description: "야경이 아름다운 여수의 명소!" },
     { title: "여수밤바다", description: "그 유명한 여수밤바다 🎵" }
   ]
-};
-
   busan: [
     { title: "광안리 해수욕장", description: "해변과 야경이 멋진 부산의 명소." },
     { title: "국제시장", description: "부산의 다양한 먹거리와 쇼핑을 즐길 수 있어요!" },

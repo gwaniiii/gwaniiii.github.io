@@ -5,7 +5,7 @@ const placeData = {
     places: [
       { name: "한라산", description: "제주도에서 가장 높은 산. 아름다운 풍경과 함께 하이킹을 즐길 수 있어요." },
       { name: "제주 올레길", description: "제주도의 바다를 따라 걷는 트레킹 코스. 풍경이 아름답다." },
-      { name: "흑돼지구이", description: "제주도에서 유명한 흑돼지 구이. 맛있는 음식도 함께 즐길 수 있다." }
+      { name: "성산 일출봉", description: "자연을 사랑하는 여행객들에게 완벽한 명소로, 특히 사진 찍기 좋은 곳" }
     ]
   },
     daegu: {

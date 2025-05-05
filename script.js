@@ -8,6 +8,14 @@ const placeData = {
       { name: "흑돼지구이", description: "제주도에서 유명한 흑돼지 구이. 맛있는 음식도 함께 즐길 수 있다." }
     ]
   },
+    daegu: {
+    name: "대구",
+    places: [
+      { name: "김광석 다시 그리기 길", description: "가수 김광석의 음악과 감성이 벽화로 살아있는 예술 산책로예요." },
+      { name: "수성못", description: "물가를 따라 산책하거나 야경을 즐기기 좋은 대구의 대표 데이트 명소예요." },
+      { name: "서문시장", description: "대구의 대표 전통시장으로 다양한 먹거리와 활기찬 분위기를 즐길 수 있어요." }
+    ]
+  },
   seoul: {
     name: "서울",
     places: [

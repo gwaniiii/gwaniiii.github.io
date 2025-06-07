@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trippy - 지역별 관광 명소</title>
+  <title>Trippy - 전체 지역 명소</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -17,155 +17,160 @@
     }
 
     header {
-      background-color: transparent;
-      color: #004080;
       text-align: center;
       padding: 30px 0;
+      color: #004080;
     }
 
     header h1 {
-      margin: 0;
       font-size: 36px;
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 18px;
+      color: #333;
     }
 
-    section {
-      padding: 40px 20px;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 28px;
-      color: #004080;
-      margin-bottom: 30px;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .place-card {
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
       padding: 20px;
-      width: 250px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 10px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
 
-    .place-card h4 {
-      font-size: 20px;
+    .place-card h3 {
       color: #0077cc;
       margin-bottom: 10px;
     }
 
     .place-card p {
-      font-size: 16px;
       color: #555;
+      font-size: 16px;
+    }
+
+    section h2 {
+      grid-column: 1 / -1;
+      font-size: 24px;
+      color: #004080;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      text-align: left;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>📍 Trippy 지역별 명소 안내</h1>
-    <p>원하는 지역의 관광 정보를 확인해보세요!</p>
+    <h1>📍 Trippy - 전체 지역 명소</h1>
+    <p>전국 주요 여행지를 한눈에 확인해보세요!</p>
   </header>
 
-  <section id="jeju">
-    <h2>🏝 제주도 명소</h2>
-    <div class="place-card">
-      <h4>한라산</h4>
-      <p>제주에서 가장 높은 산으로 다양한 등산로와 풍경을 즐길 수 있어요.</p>
-    </div>
-    <div class="place-card">
-      <h4>제주 올레길</h4>
-      <p>해안선을 따라 걷는 트레킹 코스로 아름다운 풍경이 펼쳐집니다.</p>
-    </div>
-    <div class="place-card">
-      <h4>성산 일출봉</h4>
-      <p>아름다운 해돋이 명소로 사진 찍기 좋은 스팟이에요.</p>
-    </div>
-  </section>
+  <div class="container">
+    <section>
+      <h2>🏝 제주도</h2>
+      <div class="place-card">
+        <h3>한라산</h3>
+        <p>제주에서 가장 높은 산으로 다양한 등산로와 풍경을 즐길 수 있어요.</p>
+      </div>
+      <div class="place-card">
+        <h3>제주 올레길</h3>
+        <p>해안선을 따라 걷는 트레킹 코스로 아름다운 풍경이 펼쳐집니다.</p>
+      </div>
+      <div class="place-card">
+        <h3>성산 일출봉</h3>
+        <p>아름다운 해돋이 명소로 사진 찍기 좋은 스팟이에요.</p>
+      </div>
+    </section>
 
-  <section id="seoul">
-    <h2>🏙 서울 명소</h2>
-    <div class="place-card">
-      <h4>경복궁</h4>
-      <p>조선의 대표 궁궐, 한복을 입으면 무료로 입장할 수 있어요!</p>
-    </div>
-    <div class="place-card">
-      <h4>명동</h4>
-      <p>쇼핑과 길거리 음식의 천국, 외국인 관광객들에게 인기.</p>
-    </div>
-    <div class="place-card">
-      <h4>남산타워</h4>
-      <p>서울의 대표적인 전망대, 케이블카와 야경 명소로 유명해요.</p>
-    </div>
-  </section>
+    <section>
+      <h2>🏙 서울</h2>
+      <div class="place-card">
+        <h3>경복궁</h3>
+        <p>조선의 대표 궁궐, 한복을 입으면 무료로 입장할 수 있어요!</p>
+      </div>
+      <div class="place-card">
+        <h3>명동</h3>
+        <p>쇼핑과 길거리 음식의 천국, 외국인 관광객들에게 인기.</p>
+      </div>
+      <div class="place-card">
+        <h3>남산타워</h3>
+        <p>서울의 대표적인 전망대, 케이블카와 야경 명소로 유명해요.</p>
+      </div>
+    </section>
 
-  <section id="busan">
-    <h2>🌊 부산 명소</h2>
-    <div class="place-card">
-      <h4>해운대</h4>
-      <p>부산을 대표하는 해변, 여름에 많은 사람들이 찾는 명소.</p>
-    </div>
-    <div class="place-card">
-      <h4>자갈치 시장</h4>
-      <p>싱싱한 해산물을 맛볼 수 있는 부산의 대표 전통시장.</p>
-    </div>
-    <div class="place-card">
-      <h4>광안리 해수욕장</h4>
-      <p>광안대교 야경과 함께 낭만적인 분위기를 즐길 수 있어요.</p>
-    </div>
-  </section>
+    <section>
+      <h2>🌊 부산</h2>
+      <div class="place-card">
+        <h3>해운대</h3>
+        <p>부산을 대표하는 해변, 여름에 많은 사람들이 찾는 명소.</p>
+      </div>
+      <div class="place-card">
+        <h3>자갈치 시장</h3>
+        <p>싱싱한 해산물을 맛볼 수 있는 부산의 대표 전통시장.</p>
+      </div>
+      <div class="place-card">
+        <h3>광안리 해수욕장</h3>
+        <p>광안대교 야경과 함께 낭만적인 분위기를 즐길 수 있어요.</p>
+      </div>
+    </section>
 
-  <section id="gangneung">
-    <h2>🌅 강릉 명소</h2>
-    <div class="place-card">
-      <h4>정동진</h4>
-      <p>기차역 바로 앞에 펼쳐진 바다, 일출 명소로 유명해요.</p>
-    </div>
-    <div class="place-card">
-      <h4>경포대</h4>
-      <p>강릉의 대표적 경승지, 산책로와 조용한 풍경이 매력적입니다.</p>
-    </div>
-    <div class="place-card">
-      <h4>강릉 커피거리</h4>
-      <p>바다를 보며 커피 한잔, 감성 충전되는 카페 거리입니다.</p>
-    </div>
-  </section>
+    <section>
+      <h2>🌅 강릉</h2>
+      <div class="place-card">
+        <h3>정동진</h3>
+        <p>기차역 바로 앞에 펼쳐진 바다, 일출 명소로 유명해요.</p>
+      </div>
+      <div class="place-card">
+        <h3>경포대</h3>
+        <p>강릉의 대표적 경승지, 산책로와 조용한 풍경이 매력적입니다.</p>
+      </div>
+      <div class="place-card">
+        <h3>강릉 커피거리</h3>
+        <p>바다를 보며 커피 한잔, 감성 충전되는 카페 거리입니다.</p>
+      </div>
+    </section>
 
-  <section id="yeosu">
-    <h2>🌉 여수 명소</h2>
-    <div class="place-card">
-      <h4>여수 밤바다</h4>
-      <p>야경과 음악분수로 유명한 낭만의 도시 여수!</p>
-    </div>
-    <div class="place-card">
-      <h4>여수 해상케이블카</h4>
-      <p>바다 위를 건너는 짜릿한 케이블카 체험.</p>
-    </div>
-    <div class="place-card">
-      <h4>오동도</h4>
-      <p>자연과 꽃이 어우러진 산책 코스, 특히 봄에 아름다워요.</p>
-    </div>
-  </section>
+    <section>
+      <h2>🌉 여수</h2>
+      <div class="place-card">
+        <h3>여수 밤바다</h3>
+        <p>야경과 음악분수로 유명한 낭만의 도시 여수!</p>
+      </div>
+      <div class="place-card">
+        <h3>여수 해상케이블카</h3>
+        <p>바다 위를 건너는 짜릿한 케이블카 체험.</p>
+      </div>
+      <div class="place-card">
+        <h3>오동도</h3>
+        <p>자연과 꽃이 어우러진 산책 코스, 특히 봄에 아름다워요.</p>
+      </div>
+    </section>
 
-  <section id="daegu">
-    <h2>🏞 대구 명소</h2>
-    <div class="place-card">
-      <h4>김광석 다시 그리기 길</h4>
-      <p>김광석의 감성을 벽화로 담아낸 예술 골목입니다.</p>
-    </div>
-    <div class="place-card">
-      <h4>수성못</h4>
-      <p>물가 산책과 야경이 아름다운 대구 대표 데이트 코스.</p>
-    </div>
-    <div class="place-card">
-      <h4>서문시장</h4>
-      <p>다양한 먹거리와 활기찬 분위기의 전통시장.</p>
-    </div>
-  </section>
+    <section>
+      <h2>🏞 대구</h2>
+      <div class="place-card">
+        <h3>김광석 다시 그리기 길</h3>
+        <p>김광석의 감성을 벽화로 담아낸 예술 골목입니다.</p>
+      </div>
+      <div class="place-card">
+        <h3>수성못</h3>
+        <p>물가 산책과 야경이 아름다운 대구 대표 데이트 코스.</p>
+      </div>
+      <div class="place-card">
+        <h3>서문시장</h3>
+        <p>다양한 먹거리와 활기찬 분위기의 전통시장.</p>
+      </div>
+    </section>
+  </div>
 </body>
 </html>

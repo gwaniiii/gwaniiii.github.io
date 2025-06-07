@@ -5,14 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>태관의 여행 추천</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('travel_website/images/background-trippy.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: transparent;
+      color: #004080;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #004080;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #004080;
+    }
+
+    .speech-bubble {
+      position: relative;
+      background: #fff8f0;
+      border-radius: 15px;
+      padding: 15px 20px;
+      width: fit-content;
+      max-width: 80%;
+      font-size: 18px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 15px solid transparent;
+      border-top-color: #fff8f0;
+    }
+
+    #intro {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    #intro h2 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    #intro p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav button {
+      background-color: #0077cc;
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #005fa3;
+    }
+
+    #place-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .place-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .place-card h4 {
+      font-size: 20px;
+      color: #0077cc;
+      margin-bottom: 10px;
+    }
+
+    .place-card p {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>🍀 태관의 여행 추천 홈페이지🍀</h1>
     <p>여행지를 선택하면 맛집과 명소를 추천해드려요!</p>
   </header>
-<div class="speech-bubble">🌸 안녕하세요! Trippy에 오신 걸 환영해요!</div>
-<div class="speech-bubble">🌸 Trippy는 ‘일상을 벗어난 즐거운 여행’을 의미해요. 지금 떠나볼까요?</div>
+
+  <div class="speech-bubble">🌸 안녕하세요! Trippy에 오신 걸 환영해요!</div>
+  <div class="speech-bubble">🌸 Trippy는 ‘일상을 벗어난 즐거운 여행’을 의미해요. 지금 떠나볼까요?</div>
 
   <section id="intro">
     <h2>여행을 떠날 준비 되셨나요?</h2>
@@ -31,9 +148,7 @@
   <main id="place-container">
     <!-- 정보가 여기에 카드 형태로 표시됨 -->
   </main>
-  
+
   <script src="script.js"></script>
 </body>
-  
-
 </html>

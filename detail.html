@@ -30,11 +30,11 @@
     }
 
     .detail-container img {
-    max-width: 100%;
-    margin: 20px auto;
-    border-radius: 10px;
-    display: block;
-  }
+      max-width: 100%;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
 
     .info-text {
       font-size: 18px;
@@ -87,25 +87,61 @@
     document.getElementById("place-name").textContent = name;
     document.getElementById("place-desc").textContent = desc;
 
-    // 이미지 매핑
+    // 🔽 이미지 매핑 (원하면 더 추가 가능)
     const imageMap = {
       "한라산": "travel_website/images/한라산.jpg",
       "경복궁": "travel_website/images/경복궁.jpg",
       "여수 밤바다": "travel_website/images/여수밤바다.jpg"
     };
 
-    // 지도 링크 매핑
-    const mapLinkMap = {
-      "한라산": "https://map.naver.com/p/entry/place/13481817",
-      "경복궁": "https://map.kakao.com/?q=경복궁",
-      "여수 밤바다": "https://map.kakao.com/?q=여수 밤바다"
+    // 🔽 추가 설명
+    const extraInfoMap = {
+      "한라산": "등산로가 다양해서 초보자도 갈 수 있어요!",
+      "제주 올레길": "코스마다 바다, 숲길이 다 달라서 매력 있어요.",
+      "성산 일출봉": "해 뜨기 전에 올라가면 진짜 예뻐요.",
+      "경복궁": "한복 입으면 무료 입장! 주변에 찻집 많음.",
+      "명동": "쇼핑, 먹거리, 화장품! 서울 핵심지.",
+      "남산타워": "야경 보고 싶으면 여기!",
+      "해운대": "부산 대표 바닷가. 여름에 사람 많아요.",
+      "자갈치 시장": "해산물의 천국. 현장에서 바로 먹기 가능!",
+      "광안리 해수욕장": "광안대교 야경은 진짜 예술이에요.",
+      "정동진": "기차에서 내려서 바로 바다!",
+      "경포대": "산책로가 잘 되어 있고 사진 찍기 좋아요.",
+      "강릉 커피거리": "바다 보면서 커피 마실 수 있는 감성 핫플.",
+      "여수 해상케이블카": "공중에서 바다 보면서 이동함. 개꿀.",
+      "오동도": "꽃 피는 계절에 가면 환상이에요.",
+      "여수 밤바다": "야경+음악분수+불꽃놀이 코스까지 굿.",
+      "김광석 다시 그리기 길": "사진 찍기 좋은 감성 벽화 골목!",
+      "수성못": "데이트 코스 1순위. 조명 예뻐요.",
+      "서문시장": "맛집 투어 가능. 튀김, 납작만두, 찜갈비 유명."
     };
 
-    // 추가 설명 매핑
-    const extraInfoMap = {
-      "한라산": "겨울에는 눈 덮인 풍경이 아름답고, 여름엔 시원한 하이킹 코스로 좋아요!",
-      "경복궁": "한복 입고 가면 무료 입장! 근처에 맛있는 전통찻집도 많아요.",
-      "여수 밤바다": "야경이 진짜 예뻐서 커플들이 많이 와요. 사진 맛집!"
+    // 🔽 지도 링크 (지역별 명소 전체!)
+    const mapLinkMap = {
+      // 제주
+      "한라산": "https://map.naver.com/p/entry/place/13481817",
+      "제주 올레길": "https://map.naver.com/p/entry/place/11792493",
+      "성산 일출봉": "https://map.naver.com/p/entry/place/13380550",
+      // 서울
+      "경복궁": "https://map.kakao.com/?q=경복궁",
+      "명동": "https://map.kakao.com/?q=명동",
+      "남산타워": "https://map.kakao.com/?q=남산타워",
+      // 부산
+      "해운대": "https://map.kakao.com/?q=해운대",
+      "자갈치 시장": "https://map.kakao.com/?q=자갈치시장",
+      "광안리 해수욕장": "https://map.kakao.com/?q=광안리해수욕장",
+      // 강릉
+      "정동진": "https://map.kakao.com/?q=정동진",
+      "경포대": "https://map.kakao.com/?q=경포대",
+      "강릉 커피거리": "https://map.kakao.com/?q=강릉 커피거리",
+      // 여수
+      "여수 해상케이블카": "https://map.kakao.com/?q=여수 해상케이블카",
+      "오동도": "https://map.kakao.com/?q=오동도",
+      "여수 밤바다": "https://map.kakao.com/?q=여수 밤바다",
+      // 대구
+      "김광석 다시 그리기 길": "https://map.kakao.com/?q=김광석 다시 그리기 길",
+      "수성못": "https://map.kakao.com/?q=수성못",
+      "서문시장": "https://map.kakao.com/?q=서문시장"
     };
 
     // 이미지 출력

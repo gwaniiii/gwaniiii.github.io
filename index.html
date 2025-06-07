@@ -93,6 +93,26 @@
       background-color: #005fa3;
     }
 
+    .all-regions {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .all-regions a button {
+      background-color: #00a884;
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .all-regions a button:hover {
+      background-color: #008f73;
+    }
+
     #place-container {
       display: flex;
       flex-wrap: wrap;
@@ -144,6 +164,13 @@
     <button onclick="showPlace('yeosu')">📍 여수</button>
     <button onclick="showPlace('daegu')">📍 대구</button>
   </nav>
+
+  <!-- 전체 지역 보기 버튼 -->
+  <div class="all-regions">
+    <a href="regions.html">
+      <button>🌐 전체 지역 보기</button>
+    </a>
+  </div>
 
   <!-- 지역별 명소가 표시되는 영역 -->
   <main id="place-container">

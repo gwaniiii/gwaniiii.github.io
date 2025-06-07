@@ -87,4 +87,27 @@ nav button:hover {
 .place-card p {
   font-size: 16px;
   color: #555;
+  
+}
+.speech-bubble {
+  position: relative;
+  background: #fff8f0;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: fit-content;
+  max-width: 80%;
+  font-size: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin: 30px auto;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #fff8f0;
 }

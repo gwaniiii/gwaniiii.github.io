@@ -4,27 +4,128 @@
   <meta charset="UTF-8">
   <title>명소 상세 정보</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #eef6fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .detail-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .detail-container img {
+      max-width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .info-text {
+      font-size: 18px;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .map-link:hover {
+      background-color: #005fa3;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 30px;
+      color: #0077cc;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Trippy - 명소 상세 정보</h1>
-    <a href="index.html" style="margin-left: 20px; color: white;">← 메인으로</a>
   </header>
 
-  <main style="padding: 30px; text-align: center;">
+  <div class="detail-container">
     <h2 id="place-name">명소 이름</h2>
-    <p id="place-desc">명소 설명</p>
-  </main>
+    <p id="place-desc" class="info-text">명소 설명</p>
+    <img id="place-img" src="" alt="명소 이미지" style="display: none;">
+    <p id="extra-info" class="info-text"></p>
+    <a id="map-link" class="map-link" href="#" target="_blank">📍 지도에서 보기</a>
+    <a class="back-link" href="index.html">← 돌아가기</a>
+  </div>
 
   <script>
-    // 주소창에서 name과 desc를 가져옴
     const params = new URLSearchParams(window.location.search);
-    const name = params.get("name"); // 명소 이름
-    const desc = params.get("desc"); // 설명
+    const name = params.get("name");
+    const desc = params.get("desc");
 
-    // 화면에 출력
     document.getElementById("place-name").textContent = name;
     document.getElementById("place-desc").textContent = desc;
+
+    // 이미지 매핑
+    const imageMap = {
+      "한라산": "travel_website/images/한라산.jpg",
+      "경복궁": "travel_website/images/경복궁.jpg",
+      "여수 밤바다": "travel_website/images/여수밤바다.jpg"
+    };
+
+    // 지도 링크 매핑
+    const mapLinkMap = {
+      "한라산": "https://map.naver.com/p/entry/place/13481817",
+      "경복궁": "https://map.kakao.com/?q=경복궁",
+      "여수 밤바다": "https://map.kakao.com/?q=여수 밤바다"
+    };
+
+    // 추가 설명 매핑
+    const extraInfoMap = {
+      "한라산": "겨울에는 눈 덮인 풍경이 아름답고, 여름엔 시원한 하이킹 코스로 좋아요!",
+      "경복궁": "한복 입고 가면 무료 입장! 근처에 맛있는 전통찻집도 많아요.",
+      "여수 밤바다": "야경이 진짜 예뻐서 커플들이 많이 와요. 사진 맛집!"
+    };
+
+    // 이미지 출력
+    if (imageMap[name]) {
+      const img = document.getElementById("place-img");
+      img.src = imageMap[name];
+      img.style.display = 'block';
+      img.alt = name;
+    }
+
+    // 추가 설명 출력
+    if (extraInfoMap[name]) {
+      document.getElementById("extra-info").textContent = extraInfoMap[name];
+    }
+
+    // 지도 링크 연결
+    if (mapLinkMap[name]) {
+      document.getElementById("map-link").href = mapLinkMap[name];
+    } else {
+      document.getElementById("map-link").style.display = 'none';
+    }
   </script>
 </body>
 </html>

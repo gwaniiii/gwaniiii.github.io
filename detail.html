@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>명소 상세 정보</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Trippy - 명소 상세 정보</h1>
+    <a href="index.html" style="margin-left: 20px; color: white;">← 메인으로</a>
+  </header>
+
+  <main style="padding: 30px; text-align: center;">
+    <h2 id="place-name">명소 이름</h2>
+    <p id="place-desc">명소 설명</p>
+  </main>
+
+  <script>
+    // 주소창에서 name과 desc를 가져옴
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name"); // 명소 이름
+    const desc = params.get("desc"); // 설명
+
+    // 화면에 출력
+    document.getElementById("place-name").textContent = name;
+    document.getElementById("place-desc").textContent = desc;
+  </script>
+</body>
+</html>

@@ -8,7 +8,7 @@ const placeData = {
       { name: "성산 일출봉", description: "자연을 사랑하는 여행객들에게 완벽한 명소로, 특히 사진 찍기 좋은 곳" }
     ]
   },
-    daegu: {
+  daegu: {
     name: "대구",
     places: [
       { name: "김광석 다시 그리기 길", description: "가수 김광석의 음악과 감성이 벽화로 살아있는 예술 산책로예요." },
@@ -55,10 +55,8 @@ function showPlace(place) {
   const container = document.getElementById('place-container');
   container.innerHTML = ''; // 기존 내용 지우기
 
-  // 선택한 지역의 정보 가져오기
   const placeInfo = placeData[place];
 
-  // 여행지 제목 추가
   const title = document.createElement('h3');
   title.textContent = `${placeInfo.name}의 추천 명소`;
   container.appendChild(title);
@@ -67,16 +65,22 @@ function showPlace(place) {
   placeInfo.places.forEach(place => {
     const card = document.createElement('div');
     card.classList.add('place-card');
-    
+
     const placeName = document.createElement('h4');
     placeName.textContent = place.name;
-    
+
     const placeDescription = document.createElement('p');
     placeDescription.textContent = place.description;
-    
+
+    // 💡 여기에 클릭 시 detail.html로 이동하는 기능 추가!
+    card.onclick = function () {
+      const nameParam = encodeURIComponent(place.name);
+      const descParam = encodeURIComponent(place.description);
+      window.location.href = `detail.html?name=${nameParam}&desc=${descParam}`;
+    };
+
     card.appendChild(placeName);
     card.appendChild(placeDescription);
-    
     container.appendChild(card);
   });
 }

@@ -1,10 +1,14 @@
 /* 기본 스타일 */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-image: url('images/background-trippy.png'); /* 배경 이미지 경로 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
 }
+
 
 header {
   background-color: #0077cc;
